@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  testksp:
+    image: testksp/local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: testksp
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app/
+    restart: on-failure
